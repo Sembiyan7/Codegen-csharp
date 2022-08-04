@@ -1,0 +1,21 @@
+description: The values that will be used to create the new payroll cycle record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        description:
+          type: string
+          description: The description of the payroll cycle.
+        organization:
+          $ref: '../schemas/Organization.yaml'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      required:
+        - description
+        - organization
+        - startDate

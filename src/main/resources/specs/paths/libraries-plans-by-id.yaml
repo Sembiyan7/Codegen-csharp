@@ -1,0 +1,18 @@
+get:
+  summary: Retrieve single plan by ID.
+  description: Used to retrieve a single plan by ID.
+  operationId: getPlan
+  tags:
+    - Libraries / Plans
+  parameters:
+    - $ref: '../components/parameters/PlanId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Plan.yaml'
+
+
+

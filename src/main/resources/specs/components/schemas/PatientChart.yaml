@@ -1,0 +1,16 @@
+type: object
+title: PatientChart
+description: ''
+properties:
+  id:
+    type: string
+    description: Identifier of the Admission
+  startDate:
+    type: string
+    format: date-time
+    description: Start date of the Admission
+  admissionStatus:
+    type: string
+    description: Status of the Admission
+required:
+  - id

@@ -1,0 +1,181 @@
+Person:
+  title: Person
+  Id:
+    title: Id
+    type: string
+    description: A generated Universal Unique Identifier (UUID) assigned. Represented in the form urn:uuid:{GUID}.
+    format: uuid
+    maxLength: 75
+    example: 3fa85f64-5717-4562-b3fc-2c963f66afa4
+  EnterpriseId:
+    title: EnterpriseId
+    type: string
+    description: An External Identifier assigned to the Patient (Enterprise ID).
+    maxLength: 20
+    example: 334545656
+  MedicalRecordNumber:
+    title: MedicalRecordNumber
+    type: string
+    description: An Internal Identifier assigned to a Patient (Medical Record Number).
+    maxLength: 20
+    example: 956746
+  SSN:
+    title: SSN
+    type: string
+    description: Social Security Number (SSN).
+    maxLength: 11
+    example: 333-33-3333
+  NPI:
+    title: NPI
+    type: string
+    description: National Provider Identifier (NPI) of the Physician.
+    maxLength: 10
+    example: 1245319599
+  UPIN:
+    title: UPIN
+    type: string
+    description: Unique Physician Identification Number (UPIN) of the Physician.
+    maxLength: 6
+    example: 765435
+  TaxonomyNumber:
+    title: TaxonomyNumber
+    type: string
+    description: Taxonomy Code of the Physician.
+    maxLength: 10
+    example: 207Q00000X
+  DEANumber:
+    title: DEANumber
+    type: string
+    description: The DEA number of the person.
+    maxLength: 20
+    example: XXXX
+  FederalTaxId:
+    title: FederalTaxId
+    type: string
+    description: Federal Tax Identifier of the Physician
+    maxLength: 9
+    example: 934456871
+  UserId:
+    title: UserId
+    type: string
+    description: The user-defined identifier of the User.
+    maxLength: 50
+  FirstName:
+    title: FirstName
+    type: string
+    description: The first name of the person.
+    maxLength: 20
+    example: Laura
+  LastName:
+    title: LastName
+    type: string
+    description: The last name of the person.
+    maxLength: 20
+    example: Anderson
+  MiddleName:
+    title: MiddleName
+    type: string
+    description: The middle name of the person.
+    maxLength: 20
+    example: Anne
+  PersonName:
+    type: object
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      middleName:
+        type: string
+  PreferredName:
+    title: PreferredName
+    type: string
+    description: The preferred name of the person.
+    maxLength: 20
+  MaidenName:
+    title: MaidenName
+    type: string
+    description: The maiden name of the person.
+    maxLength: 20
+    example: Smith
+  Salutation:
+    title: Salutation
+    type: string
+    description: The salutation of the person.
+    maxLength: 10
+  Title:
+    title: Title
+    type: string
+    description: The title of the person (commonly knows as prefix).
+    maxLength: 10
+  DateOfBirth:
+    title: DateOfBirth
+    type: string
+    description: The Date of Birth.
+    format: date
+    example: '1920-01-01'
+  Gender:
+    allOf:
+      - $ref: './ReferenceCode.yaml'
+      - type: object
+        description: The gender of the person.
+        example:
+          code: F
+          codeSystem: 2.16.840.1.113883.5.1
+          codeSystemName: AdministrativeGender
+          displayName: Female
+          internalCode: F
+          internalCodeType: SEX
+          internalDisplayName: Female
+  SexualOrientation:
+    allOf:
+      - $ref: './ReferenceCode.yaml'
+      - type: object
+        description: Indicates the sexual orientation of the person.
+        example:
+          code: XXXXX
+          codeSystem: XXXXX
+          codeSystemName: XXXXX
+          displayName: XXXXX
+          internalCode: XXXXX
+          internalCodeType: XXXXX
+          internalDisplayName: XXXXX
+  PrimaryLanguage:
+    allOf:
+      - $ref: './ReferenceCode.yaml'
+      - type: object
+        description: The primary language of the person.
+        example:
+          code: XXXXX
+          codeSystem: XXXXX
+          codeSystemName: XXXXX
+          displayName: XXXXX
+          internalCode: XXXXX
+          internalCodeType: XXXXX
+          internalDisplayName: XXXXX
+  Races:
+    description: A collection of Races associated to the Person.
+    type: array
+    items:
+      $ref: './ReferenceCode.yaml'
+    example:
+      code: 2106-3
+      codeSystem: 2.16.840.1.113883.5.104
+      codeSystemName: http://hl7.org/fhir/v3/Race
+      displayName: White
+      internalCode: White
+      internalCodeType: RAC
+      internalDisplayName: White
+  Ethnicity:
+    allOf:
+      - $ref: './ReferenceCode.yaml'
+      - type: object
+        description: The ethnicity of the Person.
+        example:
+          code: XXXXX
+          codeSystem: XXXXX
+          codeSystemName: XXXXX
+          displayName: XXXXX
+          internalCode: XXXXX
+          internalCodeType: XXXXX
+          internalDisplayName: XXXXX

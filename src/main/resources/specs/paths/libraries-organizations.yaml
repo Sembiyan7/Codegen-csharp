@@ -1,0 +1,16 @@
+ get:
+    summary: Retrieve organization data
+    description: Used to retrieve a full list of organization objects.
+    operationId: getOrganizations
+    tags:
+      - Libraries / Organizations
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../components/schemas/Organization.yaml'
+

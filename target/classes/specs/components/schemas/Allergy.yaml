@@ -1,0 +1,53 @@
+title: Allergy
+type: array
+items:
+  type: object
+  properties:
+    allergyID:
+      type: string
+      description: The identifier of the allergy record.
+    status:
+      type: The status of the allergy record.
+      description: Identifier of the address record.
+    onsetDateTime:
+      type: string
+      format: date-time
+    recordedDate:
+      type: string
+      format: date-time
+    code:
+      type: string
+    codeSystem:
+      type: string
+    codeSystemName:
+      type: string
+    displayName:
+      type: string
+    internalCode:
+      type: string
+    internalDisplayName:
+      type: string
+    comments:
+      type: string
+    reactions:
+      type: array
+      items:
+        type: object
+        properties:
+          reaction:
+            type: object
+            properties:
+              code:
+                type: string
+              codeSystem:
+                type: string
+              codeSystemName:
+                type: string
+              displayName:
+                type: string
+              internalCode:
+                type: string
+              internalDisplayName:
+                type: string
+              comments:
+                type: string

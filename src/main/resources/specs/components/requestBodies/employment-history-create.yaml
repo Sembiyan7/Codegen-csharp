@@ -1,0 +1,31 @@
+description: The values that will be used to create the new employment history record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        keepBaseCalendarActiveOnEnd:
+          type: boolean
+        personnelType:
+          type: object
+          properties:
+            $ref: '../schemas/ReferenceCode.yaml'
+        isExempt:
+          type: boolean
+        payrollCycle:
+          type: object
+          properties:
+            $ref: '../schemas/PayrollCycle.yaml'
+        homeOrganization:
+          type: object
+          properties:
+            $ref: '../schemas/Organization.yaml'
+      required:
+        - id
+        - startDate

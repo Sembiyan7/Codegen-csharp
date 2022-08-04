@@ -1,0 +1,26 @@
+type: object
+title: CareSetting
+description: '**CareSettingCode* Example values are `Assisted Living`, `Bereavement`, `Home Care `, `Hospice`, `Long Term Care`, `Rehab`.'
+properties:
+  id:
+    type: string
+    description: The identifier of the Care Setting.
+  code:
+    type: string
+    description: The identifier of the Care Setting.
+  description:
+    type: string
+    description: The display value for the Care Setting.
+  admssionType:
+    type: object
+    properties:
+      id:
+        type: string
+      code:
+        type: string
+      codeType:
+        type: string
+      description:
+        type: string
+required:
+  - id

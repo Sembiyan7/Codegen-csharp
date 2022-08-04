@@ -1,0 +1,21 @@
+description: The values that will be used to create the new physician record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: The first name of the physician.
+        lastName:
+          type: string
+          description: The last name of the physician.
+        enterpriseID:
+          type: string
+          maxLength: 20
+          description: The user-defined Enterprise ID for the physician.
+        NPI:
+          type: string
+          minLength: 10
+          maxLength: 10
+          description: The National Provider Identifier (NPI) of the Physician.

@@ -1,0 +1,11 @@
+title: Physician Specialty
+type: object
+properties:
+  id:
+    type: string
+  typeCode:
+    type: string
+  typeDescription:
+    type: string
+required:
+  - id

@@ -1,0 +1,24 @@
+description: The values that will be used to perform the patients search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The system-generated identifier of the patient record.
+        medicalRecordNumber:
+            type: string
+            description: The user-defined Medical Record Number (MRN) for the patient record.
+        enterpriseId:
+          type: string
+          description: The user-defined Enterprise ID for the patient record.
+        firstName:
+          type: string
+          description: The first name of the patient.
+        middleName:
+          type: string
+          description: The middle name of the patient.
+        lastName:
+          type: string
+          description: The last name of the patient.

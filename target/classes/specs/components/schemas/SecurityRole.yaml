@@ -1,0 +1,11 @@
+title: SecurityRole
+type: object
+properties:
+  id:
+    type: string
+    description: The identifier of the security role
+  name:
+    type: string
+    description: The display name of the security role.
+required:
+  - id

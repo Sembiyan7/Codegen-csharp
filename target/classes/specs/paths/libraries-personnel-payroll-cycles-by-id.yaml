@@ -1,0 +1,37 @@
+get:
+  summary: Retrieve payroll cycles for the specified personnel record.
+  description: Used to return payroll cycles for the specified personnel record.
+  operationId: getPersonnelPayrollCycleById
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/PayrollCycleId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/PayrollCycle.yaml'
+
+put:
+  summary: Update specified payroll cycle for specified personnel.
+  description: Used to updated the specified payroll cycle for the specified personnel.
+  operationId: updatePersonnelPayrollCycle
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/PayrollCycleId.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/payroll-cycles-create.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/PayrollCycle.yaml'

@@ -1,0 +1,6 @@
+components:
+  schemas:
+    PatientIdentifier:
+      type: object
+      properties:
+        $ref: './PersonName.yaml'

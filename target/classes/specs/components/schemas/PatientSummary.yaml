@@ -1,0 +1,43 @@
+type: object
+title: PatientSummary
+description: ''
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the patient record.
+  medicalRecordNumber:
+    type: string
+    description: The user-defined Medical Record Number for the patient record.
+  enterpriseId:
+    type: string
+    description: The user-defined Enterprise ID for the patient record.
+  firstName:
+    type: string
+    description: The first name of the patient.
+  middleName:
+    type: string
+    description: The middle name of the patient.
+  lastName:
+    type: string
+    description: The last name of the patient.
+  preferredName:
+    type: string
+    description: The preferred name of the patient.
+  birthDate:
+    type: string
+    format: date-time
+    description: The date of birth for the patient.
+  gender:
+    description: The gender of the patient if specified.
+    $ref: './ReferenceCode.yaml'
+  admissions:
+    type: array
+    description: List of admissions associated to the patient.
+    items:
+      $ref: './PatientChart.yaml#'
+required:
+  - id
+  - medicalRecordNumber
+  - enterpriseId
+  - firstName
+  - lastName

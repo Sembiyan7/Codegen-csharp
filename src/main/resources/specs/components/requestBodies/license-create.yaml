@@ -1,0 +1,31 @@
+description: The values that will be used to create the new license record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        isDeleted:
+          type: boolean
+          description: Indicates if this license should be or has been deleted.
+        licenseType:
+          type: object
+          properties:
+            $ref: '../schemas/ReferenceCode.yaml'
+        licensor:
+          type: object
+          properties:
+            $ref: '../schemas/ReferenceCode.yaml'
+        licenseNumber:
+          type: string
+          description: The license number.
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      required:
+        - licenseType
+        - licensor
+        - licenseNumber
+        - startDate

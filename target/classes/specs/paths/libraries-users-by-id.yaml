@@ -1,0 +1,14 @@
+get:
+  description: Returns a User object for the specified system-generated user identifier.
+  operationId: getUserById
+  parameters:
+    - $ref: '../components/parameters/UserId.yaml'
+  tags:
+    - Libraries / Users
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/User.yaml'

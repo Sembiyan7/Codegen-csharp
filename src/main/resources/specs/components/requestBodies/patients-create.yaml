@@ -1,0 +1,21 @@
+description: The values that will be used to create the new patient record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        medicalRecordNumber:
+            type: string
+            description: The user-defined Medical Record Number (MRN) for the patient record.
+        enterpriseId:
+          type: string
+          description: The user-defined Enterprise ID for the patient record.
+        firstName:
+          type: string
+          description: The first name of the patient.
+        middleName:
+          type: string
+          description: The middle name of the patient.
+        lastName:
+          type: string
+          description: The last name of the patient.

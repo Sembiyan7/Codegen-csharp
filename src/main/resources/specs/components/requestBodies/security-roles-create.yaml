@@ -1,0 +1,9 @@
+description: The values that will be used to create the new security role.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        roleName:
+          type: string
+          description: The user-defined name of the security role record.

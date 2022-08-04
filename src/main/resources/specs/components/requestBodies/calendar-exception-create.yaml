@@ -1,0 +1,31 @@
+description: The values that will be used to create the new calendar exception record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        removeResourceFromRequest:
+          type: boolean
+          description: Specifies if resource is assigned to any requests that fall within the date ragne, whether to remove resource from those requests.
+        exceptionCode:
+          type: object
+          properties:
+            $ref: '../schemas/ReferenceCode.yaml'
+        reason:
+          type: object
+          properties:
+            $ref: '../schemas/ReferenceCode.yaml'
+        statusCode:
+          type: string
+          description: The status code of the availability exception.
+          enum:
+            - 'CO'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      required:
+        - startDate
+        - endDate

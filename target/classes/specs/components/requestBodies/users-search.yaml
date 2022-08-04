@@ -1,0 +1,30 @@
+description: The values that will be used to perform the user search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The system-generated identifier of the user record.
+        userId:
+          type: string
+          description: The user-defined User ID (or username) of the user record.
+        email:
+          type: string
+          description: The user-defined Email Address of the personnel record associated to the user.
+        personnelId:
+            type: string
+            description: The user-defined Personnel ID of the personnel record associated to the user.
+        enterpriseId:
+          type: string
+          description: The user-defined Enterprise ID of the personnel record associated to the user.
+        firstName:
+          type: string
+          description: The first name of the user.
+        middleName:
+          type: string
+          description: The middle name of the user.
+        lastName:
+          type: string
+          description: The last name of the user.

@@ -1,0 +1,13 @@
+post:
+  summary: Create patient data
+  description: Used to retrieve a full list of Patient objects for a given patient.
+  operationId: createPatient
+  tags:
+    - Patients
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Patient.yaml'

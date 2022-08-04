@@ -1,0 +1,21 @@
+type: object
+title: Organization
+properties:
+  id:
+    type: string
+    description: |-
+      System-generated identifier of the
+      Organization
+  orgLevel:
+    type: string
+    description: |-
+      The numeric representation of the organization's
+      level witin the organization hierarchy
+  orgFullDescription:
+    type: string
+    description: The full hierarchical Organization path
+  orgDescription:
+    type: string
+    description: Display value of the organization
+required:
+  - id

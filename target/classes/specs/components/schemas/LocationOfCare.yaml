@@ -1,0 +1,19 @@
+title: LocationOfCare
+type: object
+properties:
+  locationType:
+    $ref: './ReferenceCode.yaml'
+  beginDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+    nullable: true
+  NPI:
+    type: string
+  addresses:
+    type: array
+    description: List of active addresses currently assigned.
+    items:
+      $ref: './Address.yaml'

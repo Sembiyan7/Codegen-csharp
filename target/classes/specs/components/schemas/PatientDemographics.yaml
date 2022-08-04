@@ -1,0 +1,56 @@
+type: object
+title: PatientDemographics
+properties:
+  id:
+    $ref: './Person.yaml#/Person/Id'
+  enterpriseID:
+    $ref: './Person.yaml#/Person/EnterpriseId'
+  medicalRecordNumber:
+    $ref: './Person.yaml#/Person/MedicalRecordNumber'
+  firstName:
+    $ref: './Person.yaml#/Person/FirstName'
+  lastName:
+    $ref: './Person.yaml#/Person/LastName'
+  middleName:
+    $ref: './Person.yaml#/Person/MiddleName'
+  preferredName:
+    $ref: './Person.yaml#/Person/PreferredName'
+  maidenName:
+    $ref: './Person.yaml#/Person/MaidenName'
+  salutation:
+    $ref: './Person.yaml#/Person/Salutation'
+  title:
+    $ref: './Person.yaml#/Person/Title'
+  ssn:
+    $ref: './Person.yaml#/Person/SSN'
+  dateOfBirth:
+    $ref: './Person.yaml#/Person/DateOfBirth'
+  gender:
+    $ref: './Person.yaml#/Person/Gender'
+  sexualOrientation:
+    $ref: './Person.yaml#/Person/SexualOrientation'
+  primaryLanguage:
+    $ref: './Person.yaml#/Person/PrimaryLanguage'
+  races:
+    $ref: './Person.yaml#/Person/Races'
+  ethnicity:
+    $ref: './Person.yaml#/Person/Ethnicity'
+  maritalStatus:
+    type: string
+    maxLength: 75
+  religion:
+    type: object
+    properties:
+      typeCode:
+        type: string
+        maxLength: 75
+        description: '**ReligionTypeCode* Example values are `Christian: Episcopalian`, `Christian: Other`, `Christian: Roman Catholic`, `Unknown`.'
+  phones:
+    type: array
+    description: List of active phones currently assigned.
+    items:
+      $ref: './Phone.yaml'
+  emailAddresses:
+    type: array
+    items:
+      $ref: './Email.yaml'

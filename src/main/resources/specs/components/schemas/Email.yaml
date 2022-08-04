@@ -1,0 +1,10 @@
+title: Email
+type: object
+properties:
+  id:
+    type: string
+  value:
+    type: string
+    maxLength: 80
+required:
+  - id

@@ -1,0 +1,18 @@
+post:
+  summary: Create personnel.
+  description: Used to create a personnel record.
+  operationId: createPersonnel
+  tags:
+    - Libraries / Personnel
+  requestBody:
+    $ref: '../components/requestBodies/personnel-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Personnel.yaml'
+
+
+

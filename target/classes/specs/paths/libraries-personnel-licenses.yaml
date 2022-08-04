@@ -1,0 +1,38 @@
+get:
+  summary: Retrieve licenses for the specified personnel record.
+  description: Used to return licenses for the specified personnel record.
+  operationId: getPersonnelLicenses
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/License.yaml'
+
+post:
+  summary: Create license for specified personnel.
+  description: Used to create a license for the specified personnel.
+  operationId: createPersonnelLicense
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/license-create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/License.yaml'
+
+
+

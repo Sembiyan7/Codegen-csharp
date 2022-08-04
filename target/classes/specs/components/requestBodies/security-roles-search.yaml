@@ -1,0 +1,12 @@
+description: The values that will be used to perform the security role search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The system-generated identifier of the security role.
+        roleName:
+          type: string
+          description: The user-defined name of the security role record.

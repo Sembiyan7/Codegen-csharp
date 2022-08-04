@@ -1,0 +1,35 @@
+get:
+  summary: Retrieve employment history records for the specified personnel record.
+  description: Used to return employment history records for the specified personnel record.
+  operationId: getPersonnelEmploymentHistory
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/EmploymentHistory.yaml'
+
+post:
+  summary: Create employment history record for specified personnel.
+  description: Used to create a employment history record for the specified personnel.
+  operationId: createPersonnelEmploymentHistory
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/employment-history-create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/EmploymentHistory.yaml'

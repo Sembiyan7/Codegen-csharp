@@ -1,0 +1,6 @@
+title: BadGateway
+description: 'Bad gateway error'
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'

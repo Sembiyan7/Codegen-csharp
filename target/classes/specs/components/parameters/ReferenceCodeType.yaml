@@ -1,0 +1,6 @@
+name: internalCodeType
+in: query
+required: false
+schema:
+  type: string
+description: The internal code type of the reference code.

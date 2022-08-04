@@ -1,0 +1,27 @@
+description: The values that will be used to perform the personnel search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The system-generated identifier of the personnel record.
+        email:
+          type: string
+          description: The user-defined Email Address of the personnel record.
+        personnelId:
+            type: string
+            description: The user-defined Personnel ID of the personnel record.
+        enterpriseId:
+          type: string
+          description: The user-defined Enterprise ID of the personnel record.
+        firstName:
+          type: string
+          description: The first name of the personnel.
+        middleName:
+          type: string
+          description: The middle name of the personnel.
+        lastName:
+          type: string
+          description: The last name of the personnel.

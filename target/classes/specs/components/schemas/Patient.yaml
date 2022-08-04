@@ -1,0 +1,147 @@
+type: object
+title: Patient
+properties:
+  id:
+    $ref: './Person.yaml#/Person/Id'
+  enterpriseID:
+    $ref: './Person.yaml#/Person/EnterpriseId'
+  medicalRecordNumber:
+    $ref: './Person.yaml#/Person/MedicalRecordNumber'
+  firstName:
+    $ref: './Person.yaml#/Person/FirstName'
+  lastName:
+    $ref: './Person.yaml#/Person/LastName'
+  middleName:
+    $ref: './Person.yaml#/Person/MiddleName'
+  preferredName:
+    $ref: './Person.yaml#/Person/PreferredName'
+  maidenName:
+    $ref: './Person.yaml#/Person/MaidenName'
+  salutation:
+    $ref: './Person.yaml#/Person/Salutation'
+  title:
+    $ref: './Person.yaml#/Person/Title'
+  ssn:
+    $ref: './Person.yaml#/Person/SSN'
+  dateOfBirth:
+    $ref: './Person.yaml#/Person/DateOfBirth'
+  gender:
+    $ref: './Person.yaml#/Person/Gender'
+  sexualOrientation:
+    $ref: './Person.yaml#/Person/SexualOrientation'
+  primaryLanguage:
+    $ref: './Person.yaml#/Person/PrimaryLanguage'
+  races:
+    description: A collection of Races associated to the Person.
+    type: array
+    items:
+      allOf:
+        - $ref: './ReferenceCode.yaml'
+        - type: object
+          example:
+            code: 2106-3
+            codeSystem: 2.16.840.1.113883.5.104
+            codeSystemName: http://hl7.org/fhir/v3/Race
+            displayName: White
+            internalCode: White
+            internalCodeType: RAC
+            internalDisplayName: White
+  ethnicity:
+    $ref: './Person.yaml#/Person/Ethnicity'
+  maritalStatus:
+    type: string
+    maxLength: 75
+  religion:
+    type: object
+    properties:
+      typeCode:
+        type: string
+        maxLength: 75
+        description: '**ReligionTypeCode* Example values are `Christian: Episcopalian`, `Christian: Other`, `Christian: Roman Catholic`, `Unknown`.'
+  careSetting:
+    $ref: './CareSetting.yaml'
+  currentLevelOfCare:
+    type: string
+    maxLength: 75
+  patientCaseManager:
+    type: string
+    maxLength: 75
+  primaryCareTeam:
+    type: string
+    maxLength: 50
+  orgIDPathForAdmission:
+    type: string
+    maxLength: 512
+  referralDate:
+    type: string
+    format: date-time
+  referralType:
+    type: string
+    maxLength: 75
+  referredByBusinessID:
+    type: string
+    maxLength: 20
+  referredByPersonnelID:
+    type: string
+    maxLength: 20
+  admittedFromType:
+    type: string
+  admittedFromBusinessID:
+    type: string
+  verbalSOCDate:
+    type: string
+    format: date-time
+  isDNR:
+    type: string
+    maxLength: 1
+    description: Indicates if the patient has a "Do not Resuscitate" order.
+    enum:
+      - 'Y'
+      - 'N'
+  evacuationType:
+    type: string
+    maxLength: 75
+  dischargeReason:
+    type: string
+    maxLength: 75
+  deathDateTime:
+    type: string
+    format: date-time
+  addresses:
+    type: array
+    description: List of active addresses currently assigned.
+    items:
+      $ref: './Address.yaml'
+  phones:
+    type: array
+    description: List of active phones currently assigned.
+    items:
+      $ref: './Phone.yaml'
+  emailAddresses:
+    type: array
+    items:
+      $ref: './Email.yaml'
+  organizations:
+    type: array
+    description: List of organizations currently assigned.
+    items:
+      $ref: './Organization.yaml'
+  admissions:
+    type: array
+    description: Current list of admissions.
+    items:
+      $ref: './PatientChart.yaml'
+  militaryService:
+    type: string
+    maxLength: 75
+  locationsOfService:
+    type: array
+    items:
+      $ref: './LocationOfCare.yaml'
+required:
+  - id
+  - medicalRecordNumber
+  - enterpriseId
+  - firstName
+  - lastName
+  - dateOfBirth

@@ -1,0 +1,15 @@
+get:
+  summary: Retrieve single organization by ID.
+  description: Used to retrieve a single organization by ID.
+  operationId: getOrganization
+  parameters:
+    - $ref: '../components/parameters/OrganizationId.yaml'
+  tags:
+    - Libraries / Organizations
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Organization.yaml'

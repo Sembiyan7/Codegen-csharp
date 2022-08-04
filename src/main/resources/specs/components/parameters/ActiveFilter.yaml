@@ -1,0 +1,7 @@
+title: ActiveFilter
+name: activeOnly
+in: path
+schema:
+  type: string
+description: Active flag
+required: true

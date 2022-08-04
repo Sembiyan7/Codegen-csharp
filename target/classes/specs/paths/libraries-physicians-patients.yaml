@@ -1,0 +1,14 @@
+get:
+  description: Retrieve patients associated to physician.
+  operationId: getPhysicianPatients
+  parameters:
+    - $ref: '../components/parameters/PhysicianId.yaml'
+  tags:
+    - Libraries / Physicians
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/PhysicianPatient.yaml'

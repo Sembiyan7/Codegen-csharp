@@ -1,0 +1,32 @@
+type: object
+title: UserPhysician
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the physician record.
+  NPI:
+    type: string
+    minLength: 10
+    maxLength: 10
+    description: The National Provider Identifier (NPI) of the Physician.
+  enterpriseID:
+    type: string
+    maxLength: 20
+    description: The user-defined Enterprise ID for the physician.
+  firstName:
+    type: string
+    description: The first name of the Physician.
+  middleName:
+    type: string
+    description: The middle name of the Physician.
+  lastName:
+    type: string
+    description: The last name of the Physician.
+  organizations:
+    type: array
+    description: List of organizations associated to the Physician.
+    items:
+      $ref: './Organization.yaml'
+required:
+  - id
+  - NPI

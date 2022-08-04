@@ -1,0 +1,6 @@
+name: payrollCycleId
+in: path
+required: true
+schema:
+  type: string
+description: The system-generated identifier of the payroll cycle.

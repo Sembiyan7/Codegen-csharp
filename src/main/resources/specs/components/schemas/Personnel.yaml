@@ -1,0 +1,21 @@
+type: object
+title: Personnel
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the personnel record.
+  personnelId:
+    type: string
+    description: The internal identifier of the personnel record.
+  NPI:
+    type: string
+    minLength: 10
+    maxLength: 10
+    description: The National Provider Identifier (NPI) of the personnel.
+  employmentHistory:
+    type: array
+    description: The employment history of the personnel.
+    items:
+      $ref: './EmploymentHistory.yaml'
+required:
+  - id

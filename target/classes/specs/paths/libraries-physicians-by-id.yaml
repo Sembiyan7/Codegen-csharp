@@ -1,0 +1,14 @@
+get:
+  description: Retrieves data for a given physician.
+  operationId: getPhysicianById
+  parameters:
+    - $ref: '../components/parameters/PhysicianId.yaml'
+  tags:
+    - Libraries / Physicians
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Physician.yaml'

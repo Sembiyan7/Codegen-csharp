@@ -1,0 +1,6 @@
+title: ServerError
+description: Indicates an internal server error
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'

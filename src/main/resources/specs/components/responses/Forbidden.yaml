@@ -1,0 +1,7 @@
+tite: Forbidden
+description: 'Indicates current user does not have permission to access requested content.'
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'
+

@@ -1,0 +1,51 @@
+get:
+  summary: Retrieve the specified calendar exceptions for the specified personnel record.
+  description: Used to return the specified calendar exceptions for the specified personnel record.
+  operationId: getPersonnelCalendarExceptionById
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/CalendarExceptionSeq.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/CalendarException.yaml'
+
+put:
+  summary: Update the specified calendar exceptions for the specified personnel.
+  description: Used to update the specified calendar exceptions for the specified personnel.
+  operationId: updatePersonnelCalendarException
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/CalendarExceptionSeq.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/calendar-exception-create.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/CalendarException.yaml'
+
+delete:
+  summary: Delete the specified calendar exceptions for the specified personnel.
+  description: Used to delete the specified calendar exceptions for the specified personnel.
+  operationId: deletePersonnelCalendarException
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/CalendarExceptionSeq.yaml'
+  responses:
+    '200':
+      description: OK
+
+
+

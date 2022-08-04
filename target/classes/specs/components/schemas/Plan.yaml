@@ -1,0 +1,22 @@
+type: object
+title: Plan
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the plan record.
+  planId:
+    type: string
+    description: The user-defined Plan ID of the plan record.
+    maxLength: 20
+  description:
+    type: string
+    maxLength: 75
+  organizations:
+    type: array
+    description: List of organizations associated to the plan.
+    items:
+      $ref: './Organization.yaml'
+required:
+  - id
+  - planId
+  - description

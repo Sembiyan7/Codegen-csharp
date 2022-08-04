@@ -1,0 +1,23 @@
+type: object
+title: License
+properties:
+  sequence:
+    type: string
+    description: The system-generated sequence of the license record.
+  isDeleted:
+    type: boolean
+    description: Indicates if this license should be or has been deleted.
+  licenseType:
+      $ref: './ReferenceCode.yaml'
+  licensor:
+      $ref: './ReferenceCode.yaml'
+  licenseNumber:
+    type: string
+    description: The license number.
+  startDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+    nullable: true

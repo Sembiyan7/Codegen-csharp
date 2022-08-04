@@ -1,0 +1,20 @@
+post:
+  summary: Retrieve persons matching search criteria specified in the request body.
+  description: Used to retrieve persons matching search criteria specified in the request body.
+  operationId: searchPersons
+  tags:
+    - Libraries / Persons
+  requestBody:
+    $ref: '../components/requestBodies/persons-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Person.yaml'
+
+
+

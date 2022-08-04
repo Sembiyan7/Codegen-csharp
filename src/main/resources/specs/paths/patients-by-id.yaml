@@ -1,0 +1,15 @@
+get:
+  summary: Retrieve patient data
+  description: Used to retrieve a full list of Patient objects for a given patient.
+  operationId: getPatients
+  tags:
+    - Patients
+  parameters:
+    - $ref: '../components/parameters/PatientId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Patient.yaml'

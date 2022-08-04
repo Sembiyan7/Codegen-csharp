@@ -1,0 +1,7 @@
+titel: NotFound
+description: 'Indicates requested content could not be located, or the user does not have permission.'
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'
+

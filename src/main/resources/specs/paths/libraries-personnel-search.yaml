@@ -1,0 +1,19 @@
+post:
+  summary: Retrieve personnel matching search criteria specified in the request body.
+  description: Used to retrieve personnel matching search criteria specified in the request body.
+  operationId: searchPersonnel
+  tags:
+    - Libraries / Personnel
+  requestBody:
+    $ref: '../components/requestBodies/personnel-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Personnel.yaml'
+
+

@@ -1,0 +1,14 @@
+post:
+  description: Create person.
+  operationId: createPerson
+  tags:
+    - Libraries / Persons
+  requestBody:
+    $ref: '../components/requestBodies/persons-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Person.yaml'

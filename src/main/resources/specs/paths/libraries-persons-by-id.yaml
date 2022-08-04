@@ -1,0 +1,14 @@
+get:
+  description: Retrieves data for a given person.
+  operationId: getPersonById
+  parameters:
+    - $ref: '../components/parameters/PersonId.yaml'
+  tags:
+    - Libraries / Persons
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Person.yaml'

@@ -1,0 +1,7 @@
+title: GatewayTimeout
+description: 'Gateway timeout'
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'
+

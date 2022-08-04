@@ -1,0 +1,6 @@
+name: calendarExceptionSeq
+in: path
+required: true
+schema:
+  type: string
+description: The system-generated sequence of the calendar exception.

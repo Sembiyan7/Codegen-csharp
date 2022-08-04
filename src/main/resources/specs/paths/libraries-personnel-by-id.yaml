@@ -1,0 +1,18 @@
+get:
+  summary: Retrieve single personnel by ID.
+  description: Used to retrieve a single personnel by ID.
+  operationId: getPersonnel
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Personnel.yaml'
+
+
+

@@ -1,0 +1,22 @@
+description: The values that will be used to perform the reference codes search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        codeSystem:
+          type: string
+          description: |-
+            The standard code system mapped to the reference code
+        code:
+          type: string
+          description: |-
+            The standard code value mapped to the reference code
+        internalCodeType:
+          type: string
+          description: |-
+            The internal code type of the reference code
+        internalCode:
+          type: string
+          description: |-
+            The internal code value of the reference code

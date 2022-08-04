@@ -1,0 +1,28 @@
+type: object
+title: Phone
+properties:
+  id:
+    type: string
+    description: Identifier of the phone record
+  typeCode:
+    type: string
+    description: Phone number type code
+  typeDescription:
+    type: string
+    description: Phone number type description
+  number:
+    type: number
+    description: Phone Number
+    maximum: 40
+  beginDate:
+    type: string
+    format: date-time
+    description: Date the phone number was active
+  endDate:
+    type: string
+    format: date-time
+    description: Date the phone number became inactive
+    nullable: true
+required:
+  - id
+  - number

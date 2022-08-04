@@ -1,0 +1,68 @@
+type: object
+title: User
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the user.
+  userId:
+    type: string
+    description: The user-defined identifier of the User.
+  firstName:
+    type: string
+    description: The first name of the user.
+  middleName:
+    type: string
+    description: The middle name of the user.
+  lastName:
+    type: string
+    description: The last name of the user.
+  pinNumber:
+    type: string
+    description: The PIN number assigned to the user.
+  primaryAddress:
+    $ref: './Address.yaml'
+  addresses:
+    description: List of active addresses for the user.
+    type: array
+    items:
+      $ref: './Address.yaml'
+  organizations:
+    type: array
+    description: List of organizations associated to the user.
+    items:
+      $ref: './Organization.yaml'
+  careSettings:
+    description: List of care settings for the user.
+    type: array
+    items:
+      $ref: './CareSetting.yaml'
+  emailAddresses:
+    description: List of email addresses for the user.
+    type: array
+    items:
+      $ref: './Email.yaml'
+  phones:
+    type: array
+    description: List of active phones for the user.
+    items:
+      $ref: './Phone.yaml'
+  securityRoles:
+    type: array
+    description: The roles to which the user is currently assigned.
+    items:
+      $ref: './SecurityRole.yaml'
+  beginDate:
+    type: string
+    format: date-time
+    description: The date the user became active.
+  endDate:
+    type: string
+    format: date-time
+    description: The date the user became inactive.
+  personnel:
+    $ref: './Personnel.yaml'
+  physician:
+    $ref: './UserPhysician.yaml'
+
+
+

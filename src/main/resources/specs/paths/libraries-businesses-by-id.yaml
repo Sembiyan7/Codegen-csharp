@@ -1,0 +1,18 @@
+get:
+  summary: Retrieve single business by ID.
+  description: Used to retrieve a single business by ID.
+  operationId: getBusinesses
+  tags:
+    - Libraries / Businesses
+  parameters:
+    - $ref: '../components/parameters/BusinessId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Business.yaml'
+
+
+

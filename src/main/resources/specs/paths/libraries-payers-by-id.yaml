@@ -1,0 +1,18 @@
+get:
+  summary: Retrieve single payer by ID.
+  description: Used to retrieve a single payer by ID.
+  operationId: getPayer
+  tags:
+    - Libraries / Payers
+  parameters:
+    - $ref: '../components/parameters/PayerId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Payer.yaml'
+
+
+

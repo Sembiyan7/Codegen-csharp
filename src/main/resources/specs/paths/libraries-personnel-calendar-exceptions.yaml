@@ -1,0 +1,38 @@
+get:
+  summary: Retrieve calendar exceptions for the specified personnel record.
+  description: Used to return calendar exceptions for the specified personnel record.
+  operationId: getPersonnelCalendarExceptions
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/CalendarException.yaml'
+
+post:
+  summary: Create calendar exception for specified personnel.
+  description: Used to create a calendar exception for the specified personnel.
+  operationId: createPersonnelCalendarException
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/calendar-exception-create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/CalendarException.yaml'
+
+
+

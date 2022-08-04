@@ -1,0 +1,18 @@
+post:
+  summary: Create plan.
+  description: Used to create a plan.
+  operationId: createPlan
+  tags:
+    - Libraries / Plans
+  requestBody:
+    $ref: '../components/requestBodies/plans-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Plan.yaml'
+
+
+

@@ -1,0 +1,28 @@
+type: object
+title: VitalCapture
+properties:
+  type:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        codeSystem:
+          type: string
+      required:
+        - code
+        - codeSystem
+  components:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+        code:
+          type: string
+        codeSystem:
+          type: string
+        value:
+          type: string

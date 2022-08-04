@@ -1,0 +1,19 @@
+post:
+  summary: Retrieve reference codes matching search criteria specified in the request body.
+  description: Used to retrieve reference codes matching search criteria specified in the request body.
+  operationId: searchReferenceCodes
+  tags:
+    - Libraries / Reference Codes
+  requestBody:
+    $ref: '../components/requestBodies/reference-codes-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/ReferenceCode.yaml'
+
+

@@ -1,0 +1,19 @@
+post:
+  summary: Retrieve plans matching search criteria specified in the request body.
+  description: Used to retrieve plans matching search criteria specified in the request body.
+  operationId: searchPlans
+  tags:
+    - Libraries / Plans
+  requestBody:
+    $ref: '../components/requestBodies/plans-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Plan.yaml'
+
+

@@ -1,0 +1,19 @@
+post:
+  summary: Retrieve payers matching search criteria specified in the request body.
+  description: Used to retrieve payers matching search criteria specified in the request body.
+  operationId: searchPayers
+  tags:
+    - Libraries / Payers
+  requestBody:
+    $ref: '../components/requestBodies/payers-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Payer.yaml'
+
+

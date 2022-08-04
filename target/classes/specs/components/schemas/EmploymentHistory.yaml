@@ -1,0 +1,31 @@
+type: object
+title: EmploymentHistory
+properties:
+  id:
+    type: string
+    description: The system generated identifier of the employment record.
+  startDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+  keepBaseCalendarActiveOnEnd:
+    type: boolean
+  personnelType:
+    type: object
+    properties:
+      $ref: './ReferenceCode.yaml'
+  isExempt:
+    type: boolean
+  payrollCycle:
+    type: object
+    properties:
+      $ref: './PayrollCycle.yaml'
+  homeOrganization:
+    type: object
+    properties:
+      $ref: './Organization.yaml'
+required:
+   - id
+   - startDate

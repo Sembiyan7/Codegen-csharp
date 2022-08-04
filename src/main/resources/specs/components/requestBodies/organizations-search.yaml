@@ -1,0 +1,16 @@
+description: The values that will be used to perform the organizations search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        orgLevel:
+          type: string
+          description: |-
+            The numeric representation of the organization's level witin the organization hierarchy
+        orgFullDescription:
+          type: string
+          description: The full hierarchical Organization path
+        orgDescription:
+          type: string
+          description: Display value of the organization

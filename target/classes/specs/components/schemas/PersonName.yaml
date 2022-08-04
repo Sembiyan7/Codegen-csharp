@@ -1,0 +1,23 @@
+type: object
+title: PersonName
+properties:
+  firstName:
+    type: string
+    description: First name
+    maxLength: 30
+  middleName:
+    type: string
+    description: Middle name
+    maxLength: 30
+  lastName:
+    type: string
+    description: Last name
+    maxLength: 30
+  preferredName:
+    type: string
+    description: Preferred name
+    maxLength: 30
+  maidenName:
+    type: string
+    description: Maiden name
+    maxLength: 30

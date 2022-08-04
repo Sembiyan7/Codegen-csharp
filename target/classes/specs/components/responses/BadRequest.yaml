@@ -1,0 +1,6 @@
+description: 'Indicates invalid payload (missing required parameters, error parsing data, missing header data)'
+content:
+ application/json:
+  schema:
+    $ref: '../schemas/Error.yaml'
+

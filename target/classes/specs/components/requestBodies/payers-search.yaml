@@ -1,0 +1,14 @@
+description: The values that will be used to perform the payer search.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        enterpriseID:
+          type: string
+          maxLength: 20
+          description: The user-defined Enterprise ID of the payer record.
+        displayName:
+          type: string
+          maxLength: 75
+          description: The Display Name of the payer record.

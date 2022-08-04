@@ -1,0 +1,49 @@
+type: object
+title: Address
+properties:
+  id:
+    type: string
+    description: Required. The identifier of the address record.
+  sequence:
+    type: string
+    description: The sequence of the address.
+  typeCode:
+    type: string
+    description: The type code of the address.
+  typeDescription:
+    type: string
+    description: The type description of the address.
+  addressLine1:
+    type: string
+    description: The first line of address.
+    maxLength: 50
+  addressLine2:
+    type: string
+    description: The second line of address (if applicable).
+    maxLength: 50
+  city:
+    type: string
+    description: The city of the address.
+    maxLength: 30
+  state:
+    type: string
+    description: The state of the address.
+    maxLength: 2
+  zip:
+    type: string
+    description: The zip code of the address.
+    maxLength: 10
+  county:
+    type: string
+    maxLength: 30
+    description: The county for the address.
+  beginDate:
+    type: string
+    format: date-time
+    description: The date the address became effective.
+  endDate:
+    type: string
+    format: date-time
+    description: The date the address became ineffective.
+required:
+  - id

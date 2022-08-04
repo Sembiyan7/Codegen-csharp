@@ -1,0 +1,7 @@
+type: object
+title: FhirExtension
+properties:
+  url:
+    type: string
+  value:
+    type: string

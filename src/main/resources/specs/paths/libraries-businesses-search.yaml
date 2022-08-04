@@ -1,0 +1,17 @@
+post:
+  summary: Retrieve businesses matching search criteria specified in the request body.
+  description: Used to retrieve businesses matching search criteria specified in the request body.
+  operationId: searchBusinesses
+  tags:
+    - Libraries / Businesses
+  requestBody:
+    $ref: '../components/requestBodies/businesses-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Business.yaml'

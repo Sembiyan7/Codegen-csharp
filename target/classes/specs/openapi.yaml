@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  title: myUnity Unified API
+  description: The myUnity Unified API supports the collection, serving, and propogation of patient and library data across myUnity applications.
+  version: '1.0'
+servers:
+  - url: /api/v1
+paths:
+  # Patients
+  /patients/search:
+    $ref: './paths/patients-search.yaml'
+  /patients:
+    $ref: './paths/patients.yaml'
+  /patients/{id}:
+    $ref: './paths/patients-by-id.yaml'
+#  /patients/{id}/summary:
+#    $ref: './paths/patients-by-id-summary.yaml'
+#  /patients/{id}/demographics:
+#    $ref: './paths/patients-by-id-demographics.yaml'
+#  /patients/{id}/payers:
+#    $ref: './paths/patients-by-id-payers.yaml'
+#  /patients/{id}/physicians:
+#    $ref: './paths/patients-by-id-physicians.yaml'
+
+

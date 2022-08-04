@@ -1,0 +1,6 @@
+title: Unauthorized
+description: Unauthorized error response
+content:
+  application/json:
+    schema:
+      $ref: '../schemas/Error.yaml'

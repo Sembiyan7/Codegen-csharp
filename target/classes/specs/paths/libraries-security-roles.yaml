@@ -1,0 +1,18 @@
+post:
+  summary: Create security role.
+  description: Used to create a security role.
+  operationId: createRole
+  tags:
+    - Libraries / Security Roles
+  requestBody:
+    $ref: '../components/requestBodies/security-roles-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/SecurityRole.yaml'
+
+
+

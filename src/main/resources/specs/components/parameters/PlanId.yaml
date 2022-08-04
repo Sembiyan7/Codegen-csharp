@@ -1,0 +1,6 @@
+name: id
+in: path
+required: true
+schema:
+  type: string
+description: The system-generated identifier of the plan.

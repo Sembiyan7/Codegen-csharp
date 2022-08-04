@@ -1,0 +1,18 @@
+post:
+  summary: Create businesses.
+  description: Used to create a business.
+  operationId: createBusiness
+  tags:
+    - Libraries / Businesses
+  requestBody:
+    $ref: '../components/requestBodies/businesses-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Business.yaml'
+
+
+

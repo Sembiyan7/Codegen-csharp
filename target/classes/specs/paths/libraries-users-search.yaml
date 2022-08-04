@@ -1,0 +1,18 @@
+post:
+  summary: Retrieve users matching search criteria specified in the request body.
+  description: Used to retrieve users matching search criteria specified in the request body.
+  operationId: searchUsers
+  tags:
+    - Libraries / Users
+  requestBody:
+    $ref: '../components/requestBodies/users-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/User.yaml'
+

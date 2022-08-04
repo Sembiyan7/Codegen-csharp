@@ -1,0 +1,6 @@
+name: codeSystem
+in: query
+required: false
+schema:
+  type: string
+description: The standard code system of the reference code.

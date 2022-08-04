@@ -1,0 +1,18 @@
+post:
+  summary: Retrieve organizations matching search criteria specified in the request body.
+  description: Used to retrieve organizations matching search criteria specified in the request body.
+  operationId: searchOrganizations
+  tags:
+    - Libraries / Organizations
+  requestBody:
+    $ref: '../components/requestBodies/organizations-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Organization.yaml'
+

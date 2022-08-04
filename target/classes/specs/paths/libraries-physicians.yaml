@@ -1,0 +1,31 @@
+get:
+  summary: Retrieves array of physician objects.
+  description: Retrieves array of physician objects.
+  operationId: getPhysicians
+  tags:
+    - Libraries / Physicians
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Physician.yaml'
+post:
+  summary: Create physician.
+  description: Create physician.
+  operationId: createPhysician
+  tags:
+    - Libraries / Physicians
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Physician.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/physicians-create.yaml'
+

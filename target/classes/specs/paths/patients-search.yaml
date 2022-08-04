@@ -1,0 +1,17 @@
+post:
+  summary: Search patient data
+  description: Used to retrieve a list of Patient objects matching given criteria.
+  operationId: searchPatients
+  tags:
+    - Patients
+  requestBody:
+    $ref: '../components/requestBodies/patients-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Patient.yaml'

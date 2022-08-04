@@ -1,0 +1,22 @@
+type: object
+title: PayrollCycle
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the payroll cycle record.
+  description:
+    type: string
+    description: The description of the payroll cycle.
+  organization:
+    $ref: './Organization.yaml'
+  startDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+    nullable: true
+required:
+  - description
+  - organization
+  - startDate

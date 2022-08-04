@@ -1,0 +1,14 @@
+{{#models}}
+{{#model}}
+namespace {{modelPackage}} {
+
+  public class {{classname}}{{#parent}} : {{{.}}}{{/parent}} {
+    {{#vars}}
+    {{#deprecated}}
+    {{/deprecated}}
+    public {{{dataType}}} {{name}};
+    {{/vars}}
+  }
+  {{/model}}
+  {{/models}}
+}

@@ -1,0 +1,18 @@
+get:
+  summary: Retrieve single reference code by ID.
+  description: Used to retrieve a single reference code by ID.
+  operationId: getReferenceCode
+  tags:
+    - Libraries / Reference Codes
+  parameters:
+    - $ref: '../components/parameters/ReferenceCodeId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ReferenceCode.yaml'
+
+
+

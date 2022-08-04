@@ -1,0 +1,18 @@
+post:
+  summary: Create payer.
+  description: Used to create a payer.
+  operationId: createPayer
+  tags:
+    - Libraries / Payers
+  requestBody:
+    $ref: '../components/requestBodies/payers-create.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Payer.yaml'
+
+
+

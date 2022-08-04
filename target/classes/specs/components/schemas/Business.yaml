@@ -1,0 +1,32 @@
+type: object
+title: Business
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the business record.
+  sequence:
+    type: string
+  displayName:
+    type: string
+    maxLength: 75
+  emailAddresses:
+    type: array
+    items:
+      $ref: './Email.yaml'
+  addresses:
+    type: array
+    description: List of active addresses currently assigned.
+    items:
+      $ref: './Address.yaml'
+  phones:
+    type: array
+    description: List of active phones currently assigned.
+    items:
+      $ref: './Phone.yaml'
+  organizations:
+    type: array
+    description: List of organizations associated to the business.
+    items:
+      $ref: './Organization.yaml'
+required:
+  - id

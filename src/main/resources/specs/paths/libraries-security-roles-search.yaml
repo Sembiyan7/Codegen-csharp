@@ -1,0 +1,19 @@
+post:
+  summary: Retrieve security roles matching search criteria specified in the request body.
+  description: Used to retrieve security roles matching search criteria specified in the request body.
+  operationId: searchRoles
+  tags:
+    - Libraries / Security Roles
+  requestBody:
+    $ref: '../components/requestBodies/security-roles-search.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/SecurityRole.yaml'
+
+

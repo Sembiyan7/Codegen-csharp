@@ -1,0 +1,51 @@
+get:
+  summary: Retrieve the specified license for the specified personnel record.
+  description: Used to return the specified license for the specified personnel record.
+  operationId: getPersonnelLicenseById
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/LicenseSeq.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/License.yaml'
+
+put:
+  summary: Update the specified license for the specified personnel.
+  description: Used to update the specified license for the specified personnel.
+  operationId: updatePersonnelLicense
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/LicenseSeq.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/license-create.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/License.yaml'
+
+delete:
+  summary: Delete the specified license for the specified personnel.
+  description: Used to delete the specified license for the specified personnel.
+  operationId: deletePersonnelLicense
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+    - $ref: '../components/parameters/LicenseSeq.yaml'
+  responses:
+    '200':
+      description: OK
+
+
+

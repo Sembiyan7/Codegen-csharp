@@ -1,0 +1,17 @@
+title: Diagnosis
+type: object
+properties:
+  id:
+    type: string
+  isPrimary:
+    type: string
+  code:
+    type: string
+  description:
+    type: string
+  onsetDate:
+    type: string
+    format: date-time
+  activeDate:
+    type: string
+    format: date-time

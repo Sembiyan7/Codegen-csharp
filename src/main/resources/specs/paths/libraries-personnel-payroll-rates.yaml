@@ -1,0 +1,38 @@
+get:
+  summary: Retrieve payroll rates for the specified personnel record.
+  description: Used to return payroll rates for the specified personnel record.
+  operationId: getPersonnelPayrollRates
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/PayrollRate.yaml'
+
+post:
+  summary: Create payroll rate for specified personnel.
+  description: Used to create a payroll rate for the specified personnel.
+  operationId: createPersonnelPayrollRate
+  tags:
+    - Libraries / Personnel
+  parameters:
+    - $ref: '../components/parameters/PersonnelId.yaml'
+  requestBody:
+    $ref: '../components/requestBodies/payroll-rates-create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/PayrollRate.yaml'
+
+
+

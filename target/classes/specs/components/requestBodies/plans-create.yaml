@@ -1,0 +1,15 @@
+description: The values that will be used to create the new plan record.
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+      
+        planId:
+          type: string
+          maxLength: 20
+          description: The user-defined Plan ID of the plan record.
+        description:
+          type: string
+          maxLength: 75
+          description: The description of the plan record.

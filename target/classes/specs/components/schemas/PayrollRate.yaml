@@ -1,0 +1,37 @@
+type: object
+title: PayrollRate
+properties:
+  id:
+    type: string
+    description: The system-generated identifier of the payroll rate record.
+  rate:
+    type: string
+    description: Decimal defining the pay rate value
+  rateType:
+    type: integer
+    enum:
+      - 0 # Base rate
+      - 1 # Fixed add-on rate
+      - 2 # Percent add-on rate
+  rateUnitOfMeasure:
+    type: integer
+    enum:
+      - 0 # Hourly
+      - 1 # Per Visit
+      - 2 # Per Unit
+      - 3 # Salary
+  organization:
+    $ref: './Organization.yaml'
+  startDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+    nullable: true
+required:
+  - rate
+  - rateType
+  - rateUnitOfMeasure
+  - organization
+  - startDate

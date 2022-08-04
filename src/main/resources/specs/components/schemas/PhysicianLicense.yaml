@@ -1,0 +1,19 @@
+title: PhysicianLicense
+type: object
+properties:
+  id:
+    type: string
+  type:
+    type: string
+  number:
+    type: string
+    maxLength: 20
+  activeDate:
+    type: string
+    format: date-time
+  inactiveDate:
+    type: string
+    format: date-time
+    nullable: true
+required:
+  - id

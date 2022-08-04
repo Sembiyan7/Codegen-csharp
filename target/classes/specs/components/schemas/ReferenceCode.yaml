@@ -1,0 +1,29 @@
+title: ReferenceCode
+type: object
+properties:
+  code:
+    type: string
+    description: The code value
+  codeSystem:
+    type: string
+    description: The code system
+  codeSystemName:
+    type: string
+    description: The code system name
+  displayName:
+    type: string
+    description: The human-readable description of the code
+  internalCode:
+    type: string
+    description: The internal (myUnity) code value
+  internalCodeType:
+    type: string
+    description: The internal (myUnity) code type
+  internalDisplayName:
+    type: string
+    description: The internal (myUnity) human-readable description of the code
+  fhirExtension:
+    type: array
+    description: Array of possible extensions in FhirExtension format
+    items:
+      $ref: './FhirExtension.yaml'
