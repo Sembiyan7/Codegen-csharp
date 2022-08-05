@@ -23,3 +23,112 @@ paths:
 #    $ref: './paths/patients-by-id-physicians.yaml'
 
 
+  # Organizations
+  /libraries/organizations/search:
+    $ref: './paths/libraries-organizations-search.yaml'
+  /libraries/organizations:
+    $ref: './paths/libraries-organizations.yaml'
+  /libraries/organizations/{id}:
+    $ref: './paths/libraries-organizations-by-id.yaml'
+
+  # Businesses
+  /libraries/businesses/search:
+    $ref: './paths/libraries-businesses-search.yaml'
+  /libraries/businesses:
+    $ref: './paths/libraries-businesses.yaml'
+  /libraries/businesses/{id}:
+    $ref: './paths/libraries-businesses-by-id.yaml'
+
+  # Persons
+  /libraries/persons/search:
+    $ref: './paths/libraries-persons-search.yaml'
+  /libraries/persons:
+    $ref: './paths/libraries-persons.yaml'
+  /libraries/persons/{id}:
+    $ref: './paths/libraries-persons-by-id.yaml'
+
+  # Payers
+  /libraries/payers/search:
+    $ref: './paths/libraries-payers-search.yaml'
+  /libraries/payers:
+    $ref: './paths/libraries-payers.yaml'
+  /libraries/payers/{id}:
+    $ref: './paths/libraries-payers-by-id.yaml'
+
+  # Plans
+  /libraries/plans/search:
+    $ref: './paths/libraries-plans-search.yaml'
+  /libraries/plans:
+    $ref: './paths/libraries-plans.yaml'
+  /libraries/plans/{id}:
+    $ref: './paths/libraries-plans-by-id.yaml'
+
+  # Physicians
+  /libraries/physicians/search:
+    $ref: './paths/libraries-physicians-search.yaml'
+  /libraries/physicians:
+    $ref: './paths/libraries-physicians.yaml'
+  /libraries/physicians/{id}:
+    $ref: './paths/libraries-physicians-by-id.yaml'
+ # /libraries/physicians/{id}/patients:
+ #   $ref: './paths/libraries-physicians-patients.yaml'
+
+  # Security Roles
+  /libraries/security/roles/search:
+    $ref: './paths/libraries-security-roles-search.yaml'
+  /libraries/security/roles:
+    $ref: './paths/libraries-security-roles.yaml'
+  /libraries/security/roles/{id}:
+    $ref: './paths/libraries-security-roles-by-id.yaml'
+
+  # Users
+  /libraries/users/search:
+    $ref: './paths/libraries-users-search.yaml'
+  /libraries/users:
+    $ref: './paths/libraries-users.yaml'
+  /libraries/users/{id}:
+    $ref: './paths/libraries-users-by-id.yaml'
+
+  # Personnel
+  /libraries/personnel/search:
+    $ref: './paths/libraries-personnel-search.yaml'
+  /libraries/personnel:
+    $ref: './paths/libraries-personnel.yaml'
+  /libraries/personnel/{id}:
+    $ref: './paths/libraries-personnel-by-id.yaml'
+
+  # Personnel - Payroll
+  /libraries/personnel/{id}/payroll/rates:
+    $ref: './paths/libraries-personnel-payroll-rates.yaml'
+  /libraries/personnel/{id}/payroll/rates/{payrollRateId}:
+    $ref: './paths/libraries-personnel-payroll-rates-by-id.yaml'
+  /libraries/personnel/{id}/payroll/cycles:
+    $ref: './paths/libraries-personnel-payroll-cycles.yaml'
+  /libraries/personnel/{id}/payroll/cycles/{payrollCycleId}:
+    $ref: './paths/libraries-personnel-payroll-cycles-by-id.yaml'
+
+  # Personnel - Licenses
+  /libraries/personnel/{id}/licenses:
+    $ref: './paths/libraries-personnel-licenses.yaml'
+  /libraries/personnel/{id}/licenses/{licenseSeq}:
+    $ref: './paths/libraries-personnel-licenses-by-id.yaml'
+
+  # Personnel - Employment History
+  /libraries/personnel/{id}/employment:
+    $ref: './paths/libraries-personnel-employment.yaml'
+  /libraries/personnel/{id}/employment/{employmentId}:
+    $ref: './paths/libraries-personnel-employment-by-id.yaml'
+
+  # Personnel - Base Calendar
+  /libraries/personnel/{id}/calendar/exceptions:
+    $ref: './paths/libraries-personnel-calendar-exceptions.yaml'
+  /libraries/personnel/{id}/calendar/exceptions/{calendarExceptionSeq}:
+    $ref: './paths/libraries-personnel-calendar-exceptions-by-id.yaml'
+
+  # Reference Codes (aka Dictionaries)
+  /libraries/reference-codes/search:
+    $ref: './paths/libraries-reference-codes-search.yaml'
+  /libraries/reference-codes:
+    $ref: './paths/libraries-reference-codes.yaml'
+  /libraries/reference-codes/{id}:
+    $ref: './paths/libraries-reference-codes-by-id.yaml'

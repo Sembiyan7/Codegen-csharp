@@ -8,13 +8,13 @@ content:
           type: boolean
           description: Specifies if resource is assigned to any requests that fall within the date ragne, whether to remove resource from those requests.
         exceptionCode:
-          type: object
-          properties:
-            $ref: '../schemas/ReferenceCode.yaml'
+#          type: object
+#          properties:
+          $ref: '../schemas/ReferenceCode.yaml'
         reason:
-          type: object
-          properties:
-            $ref: '../schemas/ReferenceCode.yaml'
+#          type: object
+#          properties:
+          $ref: '../schemas/ReferenceCode.yaml'
         statusCode:
           type: string
           description: The status code of the availability exception.

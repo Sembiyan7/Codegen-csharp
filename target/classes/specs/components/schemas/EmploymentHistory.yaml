@@ -13,19 +13,19 @@ properties:
   keepBaseCalendarActiveOnEnd:
     type: boolean
   personnelType:
-    type: object
-    properties:
-      $ref: './ReferenceCode.yaml'
+    # type: object
+    # properties:
+    $ref: './ReferenceCode.yaml'
   isExempt:
     type: boolean
   payrollCycle:
-    type: object
-    properties:
-      $ref: './PayrollCycle.yaml'
+#    type: object
+#    properties:
+    $ref: './PayrollCycle.yaml'
   homeOrganization:
-    type: object
-    properties:
-      $ref: './Organization.yaml'
+#    type: object
+#    properties:
+    $ref: './Organization.yaml'
 required:
    - id
    - startDate

@@ -8,13 +8,13 @@ content:
           type: boolean
           description: Indicates if this license should be or has been deleted.
         licenseType:
-          type: object
-          properties:
-            $ref: '../schemas/ReferenceCode.yaml'
+#          type: object
+#          properties:
+          $ref: '../schemas/ReferenceCode.yaml'
         licensor:
-          type: object
-          properties:
-            $ref: '../schemas/ReferenceCode.yaml'
+#          type: object
+#          properties:
+          $ref: '../schemas/ReferenceCode.yaml'
         licenseNumber:
           type: string
           description: The license number.
